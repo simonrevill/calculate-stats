@@ -6,4 +6,10 @@ describe("calculate stats tests", () => {
       calculateStats([]);
     }).toThrow("sequence is empty");
   });
+
+  it("does not throw an error when the provided sequence is not empty", () => {
+    expect(() => {
+      calculateStats([1, 2, 3]);
+    }).not.toThrow("sequence is empty");
+  });
 });
