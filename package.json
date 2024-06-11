@@ -4,7 +4,9 @@
   "description": "Practice repo for implementing the Calculate Stats kata with the TDD workflow.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll",
+    "test:coverage": "jest --watchAll --coverage",
+    "test:mutation": "npx stryker run"
   },
   "repository": {
     "type": "git",
