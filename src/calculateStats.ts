@@ -1,4 +1,4 @@
-type Sequence = number[];
+import { Sequence } from "./types";
 
 export default function calculateStats(sequence: Sequence) {
   if (!sequence.length) {
