@@ -7,5 +7,6 @@ export default function calculateStats(sequence: Sequence): Stats {
 
   return {
     minimumValue: Math.min(...sequence),
+    maximumValue: Math.max(...sequence),
   };
 }

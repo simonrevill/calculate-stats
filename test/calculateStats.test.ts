@@ -16,8 +16,20 @@ describe("calculate stats tests", () => {
   it("should return a stats object with a field for the minimum value in the sequence", () => {
     const result: Stats = calculateStats([1, 2, 3, -1, -7, 0]);
 
-    expect(result).toEqual({
-      minimumValue: -7,
-    });
+    expect(result).toEqual(
+      expect.objectContaining({
+        minimumValue: -7,
+      })
+    );
+  });
+
+  it("should return a stats object with a field for the maximum value in the sequence", () => {
+    const result: Stats = calculateStats([1, 2, 3, -1, -7, 0]);
+
+    expect(result).toEqual(
+      expect.objectContaining({
+        maximumValue: 3,
+      })
+    );
   });
 });
