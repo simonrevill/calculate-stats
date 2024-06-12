@@ -1,4 +1,4 @@
-import calculateStats, { Stats } from "../src";
+import calculateStats from "../src";
 
 describe("calculate stats tests", () => {
   it("throws an error when the provided sequence is empty", () => {
@@ -14,7 +14,7 @@ describe("calculate stats tests", () => {
   });
 
   it("should return a stats object with a field for the minimum value in the sequence", () => {
-    const result: Stats = calculateStats([1, 2, 3, -1, -7, 0]);
+    const result = calculateStats([1, 2, 3, -1, -7, 0]);
 
     expect(result).toEqual(
       expect.objectContaining({
@@ -24,7 +24,7 @@ describe("calculate stats tests", () => {
   });
 
   it("should return a stats object with a field for the maximum value in the sequence", () => {
-    const result: Stats = calculateStats([1, 2, 3, -1, -7, 0]);
+    const result = calculateStats([1, 2, 3, -1, -7, 0]);
 
     expect(result).toEqual(
       expect.objectContaining({
