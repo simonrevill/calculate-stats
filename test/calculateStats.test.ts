@@ -32,4 +32,14 @@ describe("calculate stats tests", () => {
       })
     );
   });
+
+  it("should return a stats object with a field for the number of elements in the sequence", () => {
+    const result = calculateStats([1, 2, 3, -1, -7, 0]);
+
+    expect(result).toEqual(
+      expect.objectContaining({
+        numberOfElements: 6,
+      })
+    );
+  });
 });
