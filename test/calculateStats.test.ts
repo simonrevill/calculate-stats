@@ -42,4 +42,14 @@ describe("calculate stats tests", () => {
       })
     );
   });
+
+  it("should return a stats object with a field for the average value of the elements in the sequence", () => {
+    const result = calculateStats([1, 2, 3, -1, -7, 0]);
+
+    expect(result).toEqual(
+      expect.objectContaining({
+        averageValue: "-0.333333",
+      })
+    );
+  });
 });
