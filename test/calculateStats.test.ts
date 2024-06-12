@@ -1,4 +1,4 @@
-import calculateStats from "../src";
+import calculateStats, { Stats } from "../src";
 
 describe("calculate stats tests", () => {
   it("throws an error when the provided sequence is empty", () => {
@@ -51,5 +51,16 @@ describe("calculate stats tests", () => {
         averageValue: "-0.333333",
       })
     );
+  });
+
+  it("should return a valid stats object", () => {
+    const result = calculateStats([1, 2, 3, -1, -7, 0]);
+
+    expect(result).toEqual<Stats>({
+      minimumValue: -7,
+      maximumValue: 3,
+      numberOfElements: 6,
+      averageValue: "-0.333333",
+    });
   });
 });
